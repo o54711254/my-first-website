@@ -7,6 +7,20 @@
 </head>
 <body>
     <h1><a href="index.html">WEB</h1></a>
+    <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+        }
+
+    ">
+
     <div id="grid">
     <ol>
         <li><a href="1.html">HTML</a></li>
@@ -33,8 +47,21 @@
         dates, regular expressions, standard data structures, 
         and the Document Object Model (DOM).
     </p>
+    <input id="night_day2" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+     }
+
+    ">    
     </div>
-    </div>
+   </div>
 
     </body>
     </html>
