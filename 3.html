@@ -4,31 +4,45 @@
     <title>WEB1 - html</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function LinksSetColor(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = color;
+                i = i+1;
+            }            
+        }
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+        function BodySetBackgroundColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            if (self.value === 'night'){
+                BodySetBackgroundColor('black');
+                BodySetColor('white');
+                self.value='day';
+
+                LinksSetColor('powderblue');
+
+            } else {
+                BodySetBackgroundColor('white');
+                BodySetColor('black');
+                self.value='night';
+
+                LinksSetColor('blue');
+            }
+        }
+    </script>
 </head>
 <body>
     <h1><a href="index.html">WEB</h1></a>
     <input id="night_day" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if (this.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value='day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'powderblue';
-            i = i+1;
-        }
-
-    } else {
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        this.value='night';
-        }
-
-
+        nightDayHandler(self)
     ">
 
     <div id="grid">
@@ -57,34 +71,8 @@
         dates, regular expressions, standard data structures, 
         and the Document Object Model (DOM).
     </p>
-    <input id="night_day2" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if (this.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value='day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'powderblue';
-            i = i+1;
-        }
-    } else {
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        this.value='night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'blue';
-            i = i+1;
-        }
-     }
-    ">    
+    
     </div>
    </div>
 
