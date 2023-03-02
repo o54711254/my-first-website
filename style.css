@@ -1,5 +1,5 @@
 body{
-    margin:0;
+    margin:auto;
 }
 a {
     text-decoration: none;
@@ -36,4 +36,9 @@ ol{border-right:1px solid;
     h1{
         border-bottom: none;
     }
+}
+img {
+    float:left;
+    display: block; 
+    margin: auto;
 }
